@@ -13,3 +13,7 @@ services:
     image: mbentley/context-root-example:v3
   nginx:
     image: nginx:alpine
+  jenkins:
+    image: jenkins/jenkins:lts
+    environment:
+      - JENKINS_OPTS="--prefix=/jenkins"

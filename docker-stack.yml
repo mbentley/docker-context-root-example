@@ -32,6 +32,12 @@ services:
     image: nginx:alpine
     networks:
       - routerexample
+  jenkins:
+    image: jenkins/jenkins:lts
+    environment:
+      - JENKINS_OPTS="--prefix=/jenkins"
+    networks:
+      -routerexample
 
 networks:
   routerexample:
